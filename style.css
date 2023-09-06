@@ -68,6 +68,8 @@ footer{
 }
 .sub-heading{
     text-align: center;
+    margin:40px 0;
+    font-weight:600 ;
 }
 
  /* font-family: 'Montserrat', sans-serif;
