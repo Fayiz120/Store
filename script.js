@@ -78,7 +78,7 @@ function stopImageRotation() {
   clearInterval(interval);
 }
 
-// Add event listeners to each image element
+
 image1.addEventListener('mouseenter', stopImageRotation);
 image2.addEventListener('mouseenter', stopImageRotation);
 image3.addEventListener('mouseenter', stopImageRotation);
@@ -86,7 +86,7 @@ image4.addEventListener('mouseenter', stopImageRotation);
 image5.addEventListener('mouseenter', stopImageRotation);
 image6.addEventListener('mouseenter', stopImageRotation);
 
-// Add event listeners to resume image rotation when hovering ends
+
 image1.addEventListener('mouseleave', startImageRotation);
 image2.addEventListener('mouseleave', startImageRotation);
 image3.addEventListener('mouseleave', startImageRotation);
@@ -94,5 +94,6 @@ image4.addEventListener('mouseleave', startImageRotation);
 image5.addEventListener('mouseleave', startImageRotation);
 image6.addEventListener('mouseleave', startImageRotation);
 
-// Start image rotation initially
+
 startImageRotation();
+
