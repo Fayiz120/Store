@@ -132,6 +132,50 @@
                 <h5 class="product-description">₹10999.0</h5>
             
         </div>
+<!-- php -->
+        <p> php code start here </p>
+
+        <?php
+// Database connection configuration
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "shop";
+
+// Create a connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Query to fetch product data from the database
+$sql = "SELECT * FROM products";
+$result = $conn->query($sql);
+
+// Check for query execution errors
+if ($result === false) {
+    echo "Error executing query: " . $conn->error;
+    exit();
+}
+
+// Loop through the results and generate product cards
+while ($row = $result->fetch_assoc()) {
+    echo '<div class="card  col-10 col-md-5 col-lg-3">';
+    echo '<img src="' . $row['url'] . '" class="card-img" alt="' . $row['name'] . '">';
+    echo '<p class="product-description">' . $row['name'] . '</p>';
+    echo '<h5 class="product-description">₹' . $row['price'] . '</h5>';
+    // You can add more details here
+    echo '</div>';
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+
+<p>php code end here</p>
     </div>
 </div>
 
