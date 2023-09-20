@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $category_id, $name, $price, $url);
 
     if ($stmt->execute()) {
-        echo "Product added successfully!";
+        header("location:products.php");
     } else {
         echo "Error adding product: " . $stmt->error;
     }
