@@ -55,7 +55,7 @@
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link " href="men.html">Men</a>
+                            <a class="nav-link " href="man.html">Men</a>
                         </li>
 
                         <li class="nav-item">
@@ -70,9 +70,20 @@
             </div>
             <div class="signup-section">
 
-                <a href="login.html" class="sign-item"> <i class="fa-solid fa-right-to-bracket fa-2xl "
-                        style="color: #000000;"></i></a>
-                <a href="" class="sign-item"> <i class="fa-solid fa-magnifying-glass fa-2xl"
+                <?php
+                session_start();
+            
+                // Check if the user is logged in
+                if (isset($_SESSION['name'])) {
+                    $username = $_SESSION['name'];
+                    echo "<p>Welcome, $username!</p> <a href='logout.php'>Logout</a>";
+                } else {
+                    echo "<p>Hi Guest</p><a href='login.html' class='sign-item'> <i class='fa-solid fa-right-to-bracket fa-2xl '
+                    style='color: #000000;'></i></a>";
+                }
+                ?>
+                
+                <a href="cart.html" class="sign-item"> <i class="fa-solid fa-cart-shopping fa-2xl"
                         style="color: #000000;"></i></a>
             </div>
 
@@ -80,9 +91,9 @@
     </nav>
 
     <div class="row">
-        <video src="FIFA World Cup™ 2022 _ Family Reunion _ adidas.mp4" autoplay loop class="col-12"></video>
-        <img src="https://images.unsplash.com/photo-1519931127525-6b6a7619a003?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFkaWRhcyUyMHNob2VzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
-            alt="" srcset="" class="cover-img">
+        <!-- <video src="FIFA World Cup™ 2022 _ Family Reunion _ adidas.mp4" autoplay loop class="col-12"></video> -->
+        <!-- <img src="https://images.unsplash.com/photo-1519931127525-6b6a7619a003?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGFkaWRhcyUyMHNob2VzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt="" srcset="" class="cover-img"> -->
     </div>
 
     <div class="container  ">
@@ -112,7 +123,7 @@
                 <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/7e380c55663142f583243f9722ec39bd_9366/Forum_XLG_Shoes_Pink_IE7351_01_standard.jpg"
                     class="card-img" alt="...">
                 <div class="card-img-overlay">
-                    <h5 class="card-title">Men</h5>
+                    <h5 class="card-title">Women</h5>
                 </div>
             </div>
 
