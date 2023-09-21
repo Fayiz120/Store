@@ -87,7 +87,7 @@
                 }
                 ?>
                 
-                <a href="cart.html" class="sign-item"> <i class="fa-solid fa-cart-shopping fa-2xl"
+                <a href="cart.php" class="sign-item"> <i class="fa-solid fa-cart-shopping fa-2xl"
                         style="color: #000000;"></i></a>
             </div>
 
