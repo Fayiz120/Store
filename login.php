@@ -37,6 +37,8 @@ if ($result->num_rows == 1) {
 
 
     $_SESSION["name"] = $row["Name"];
+    $_SESSION["user_id"] = $row["id"];
+    
     header("Location: index.php"); // Redirect to a welcome page
 } else {
     // User authentication failed

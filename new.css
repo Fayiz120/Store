@@ -1,3 +1,16 @@
 .product-description{
     color: #000;
 }
+.card-btn{
+    background-color: #A683E3;
+    color: #dc0000;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.card-btn:hover{
+    background-color: #A683E3;
+    color: #000;
+}

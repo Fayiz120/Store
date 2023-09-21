@@ -52,7 +52,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="new.html">New arrival</a>
+                            <a class="nav-link " href="new.php">New arrival</a>
                         </li>
 
                         <li class="nav-item ">
@@ -169,7 +169,9 @@ while ($row = $result->fetch_assoc()) {
     echo '<img src="' . $row['url'] . '" class="card-img" alt="' . $row['name'] . '">';
     echo '<p class="product-description">' . $row['name'] . '</p>';
     echo '<h5 class="product-description">₹' . $row['price'] . '</h5>';
-    // You can add more details here
+   echo  '<a href="addToCart.php?product_id='.$row['product_id'].'" class="btn card-btn">Add to Cart</a>';
+//   echo '<a href="addToCart.php?data=' . base64_encode(json_encode(array('product_id' => $row['product_id'], 'product_name' => $row['name'], 'product_price' => $row['price']))) . '" class="btn card-btn">Add to Cart</a>';
+
     echo '</div>';
 }
 
