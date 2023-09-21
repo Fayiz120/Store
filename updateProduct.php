@@ -12,19 +12,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["product_id"])) {
+    $product_id = $_POST["product_id"];
+    $category_id = $_POST["category_id"];
+    $name = $_POST["name"];
+    $price = $_POST["price"];
+    $url = $_POST["url"];
 
-if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["product_id"])) {
-    $product_id = $_GET["product_id"];
-
-    // Delete the product from the database
-    $sql = "DELETE FROM products WHERE product_id=$product_id";
-
+    // Update the product in the database
+    $sql = "UPDATE products SET category_id='$category_id', name='$name', price='$price', url='$url' WHERE product_id=$product_id";
     if ($conn->query($sql) === TRUE) {
-        // Product deleted successfully
+        // Product updated successfully
         header("Location: products.php"); // Redirect to the product list page
         exit();
     } else {
-        // Error deleting product
+        // Error updating product
         echo "Error: " . $conn->error;
     }
 } else {

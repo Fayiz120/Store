@@ -63,6 +63,9 @@
                             <a class="nav-link " href="women.html">Women</a>
                         </li>
                         
+                        <li class="nav-item">
+                            <a class="nav-link " href="products.php">Products</a>
+                        </li>
 
 
                     </ul>
@@ -162,7 +165,7 @@ if ($result === false) {
 
 // Loop through the results and generate product cards
 while ($row = $result->fetch_assoc()) {
-    echo '<div class="card  col-10 col-md-5 col-lg-3">';
+     echo '<div class="card  col-10 col-md-5 col-lg-3">';
     echo '<img src="' . $row['url'] . '" class="card-img" alt="' . $row['name'] . '">';
     echo '<p class="product-description">' . $row['name'] . '</p>';
     echo '<h5 class="product-description">₹' . $row['price'] . '</h5>';

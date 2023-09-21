@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,9 +19,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
 
-    
+
     <nav class="navbar navbar-expand-lg header ">
         <div class="container-fluid ">
             <!-- This Nav bar brand -->
@@ -48,7 +50,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="new.html">New arrival</a>
+                            <a class="nav-link " href="new.php">New arrival</a>
                         </li>
 
                         <li class="nav-item ">
@@ -80,20 +82,20 @@
     <div class="form-div">
         <div class="login-container">
 
-      
-    <form action="add_product.php" method="POST" enctype="multipart/form-data">
-        <input type="text" id="category_id" placeholder="Category ID" name="category_id" required><br>
 
-        <input type="text" id="name" placeholder="Name" name="name" required><br>
+            <form action="add_product.php" method="POST" enctype="multipart/form-data">
+                <input type="text" id="category_id" placeholder="Category ID" name="category_id" required><br>
 
-        <input type="text" id="price" placeholder="Product price" name="price" required><br>
+                <input type="text" id="name" placeholder="Name" name="name" required><br>
 
-        <input type="text" id="url" placeholder="Product URL" name="url" required><br>
+                <input type="text" id="price" placeholder="Product price" name="price" required><br>
 
-        <input type="submit" value="Add Product">
-    </form>
-</div>
-</div>
+                <input type="text" id="url" placeholder="Product URL" name="url" required><br>
+
+                <input type="submit" value="Add Product">
+            </form>
+        </div>
+    </div>
     <footer class="text-center text-lg-start text-white ">
         <!-- Grid container -->
         <div class="container p-4 pb-0">

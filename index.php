@@ -47,11 +47,11 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item ">
-                            <a class="nav-link " href="index.html">Home</a>
+                            <a class="nav-link " href="index.php">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="new.html">New arrival</a>
+                            <a class="nav-link " href="new.php">New arrival</a>
                         </li>
 
                         <li class="nav-item ">
@@ -60,6 +60,10 @@
 
                         <li class="nav-item">
                             <a class="nav-link " href="women.html">Women</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " href="addProduct.html">Add product</a>
                         </li>
 
 

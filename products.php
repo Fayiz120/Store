@@ -73,7 +73,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="new.html">New arrival</a>
+                            <a class="nav-link " href="new.php">New arrival</a>
                         </li>
 
                         <li class="nav-item ">
@@ -129,9 +129,7 @@
             echo "<td>" . $row["category_id"] . "</td>";
             echo "<td>" . $row["name"] . "</td>";
             echo "<td>" . $row["price"] . "</td>";
-            echo "<td>";
-            echo "<td><a href='edit_employee.php?id=" . $row['id'] . "'>Edit</a> | <a href='delete_employee.php?id=" . $row['id'] . "'>Delete</a></td>";
-            echo "</td>";
+            echo "<td><a href='editProduct.php?product_id=" . $row['product_id'] . "'>Edit</a>| <a href='delete.php?product_id=" . $row['product_id'] . "'>Delete</a></td>";
             echo "</tr>";
         }
 
