@@ -139,19 +139,9 @@
         <p> php code start here </p>
 
         <?php
-// Database connection configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "shop";
 
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+        
+require_once('templates/conn.php');
 
 // Query to fetch product data from the database
 $sql = "SELECT * FROM products";

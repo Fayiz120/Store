@@ -6,16 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "shop";
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once('templates/conn.php');
 
 $user_id = $_SESSION['user_id'];
 $sql ="SELECT c.quantity, p.name, p.price FROM cart c

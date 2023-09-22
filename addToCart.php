@@ -6,18 +6,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "shop";
-
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once('templates/conn.php');
 
 if (isset($_GET['product_id'])) {
     $user_id = $_SESSION['user_id'];

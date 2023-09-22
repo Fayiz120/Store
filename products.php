@@ -101,21 +101,9 @@
         </div>
     </nav>
     <?php
-    // Database connection configuration (replace with your credentials)
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "shop";
+    require_once('templates/conn.php');
 
-    // Create a connection
-    $conn = new mysqli($servername, $username, $password, $database);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Retrieve product data from the database
+    
     $sql = "SELECT * FROM products";
     $result = $conn->query($sql);
 

@@ -1,17 +1,7 @@
 <?php
-// Database connection configuration
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "shop";
 
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $database);
+require_once('templates/conn.php');
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 // Handle form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
