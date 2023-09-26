@@ -51,64 +51,9 @@ if (!(isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true)) {
             background-color: #E4E9FD ;
         }
         </style>
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg header ">
-        <div class="container-fluid ">
-            <!-- This Nav bar brand -->
-            <div class="container brand-logo">
-                <a class="navbar-brand" href="#">
-                    <img src="https://seeklogo.com/images/A/adidas-logo-107B082DA0-seeklogo.com.png" alt="Bootstrap"
-                        class="logo">
-                </a>
-            </div>
-
-            <!-- navbar list button for smaller devices -->
-            <div class="sections nav-button">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- navbar list items  -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-
-                        <li class="nav-item ">
-                            <a class="nav-link " href="index.php">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link " href="new.php">New arrival</a>
-                        </li>
-
-                        <li class="nav-item ">
-                            <a class="nav-link " href="men.html">Men</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link " href="addProduct.html">Add Product</a>
-                        </li>
-
-
-
-                    </ul>
-                </div>
-
-            </div>
-            <div class="signup-section">
-
-                <a href="login.html" class="sign-item"> <i class="fa-solid fa-right-to-bracket fa-2xl "
-                        style="color: #000000;"></i></a>
-                <a href="" class="sign-item"> <i class="fa-solid fa-magnifying-glass fa-2xl"
-                        style="color: #000000;"></i></a>
-            </div>
-
-        </div>
-    </nav>
+   <?php
+    require_once('templates/header2.php');
+    ?>
     <?php
     require_once('templates/conn.php');
 

@@ -35,7 +35,7 @@ if ($result->num_rows > 0) {
 // Insert user registration data into the database
 $insertQuery = "INSERT INTO user (name, email, Phone_Number, address, password) VALUES ('$name', '$email', '$phone', '$address', '$password')";
 if ($conn->query($insertQuery) === TRUE) {
-    echo "Registration successful! <a href='login.html'>Login</a>";
+    echo "Registration successful! <a href='login.php'>Login</a>";
 } else {
     echo "Error: " . $insertQuery . "<br>" . $conn->error;
 }

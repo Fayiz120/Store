@@ -100,9 +100,9 @@
                 echo '<img src="' . $row['url'] . '" class="card-img" alt="' . $row['name'] . '">';
                 echo '<p class="product-description">' . $row['name'] . '</p>';
                 echo '<h5 class="product-description">₹' . $row['price'] . '</h5>';
-               
-                ?> <a href="addToCart.php?product_id=<?php echo $row['product_id']; ?>&source=new"
-                    class="btn ">Add to Cart</a>
+
+                ?> <a href="addToCart.php?product_id=<?php echo $row['product_id']; ?>&source=new" class="btn ">Add to
+                    Cart</a>
                 <?php
                 echo '</div>';
             }
@@ -123,7 +123,8 @@
     <?php
 
     require_once('templates/conn.php');
-require_once('templates/footer.php');
+    require_once('templates/footer.php');
 
 
     ?>
+    

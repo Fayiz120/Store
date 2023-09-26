@@ -1,3 +1,10 @@
+<?php
+if (session_id() === '') {
+    session_start();
+}
+
+
+?>
 <title>Online Store</title>
 </head>
 
@@ -39,6 +46,13 @@
                         <li class="nav-item">
                             <a class="nav-link " href="women.php">Women</a>
                         </li>
+                        <?php
+                        if (isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true) {
+                            // User is an admin, show the "Add Product" link
+                            echo '<li class="nav-item"><a class="nav-link" href="addProduct.php">Add Product</a></li>';
+                            echo '<li class="nav-item"><a class="nav-link" href="Products.php">Products</a></li>';
+                        }
+                        ?>
 
 
 
@@ -49,7 +63,6 @@
             <div class="signup-section">
 
                 <?php
-                session_start();
 
                 // Check if the user is logged in
                 if (isset($_SESSION['name'])) {

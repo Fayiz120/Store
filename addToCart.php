@@ -21,13 +21,12 @@ if (isset($_GET['product_id'])) {
     }
         if ($action === 'remove') {
             
-          // Check if the item is in the cart
           if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             $quantity = $row['quantity'] - 1;
 
             if ($quantity > 0) {
-                // Update the quantity
+          
                 $updateSql = "UPDATE cart SET quantity = $quantity WHERE id = " . $row['id'];
                 $conn->query($updateSql);
             } else {
@@ -59,9 +58,9 @@ if (isset($_GET['product_id'])) {
 
 if (isset($_GET['source'])) {
     $source = $_GET['source'];
-    if ($source === 'new') {
+    if ($source == 'new') {
 
-        header("Location: cart.php");
+        header("Location: new.php");
     } elseif ($source === 'cart') {
         header("Location: cart.php");
     } else {
