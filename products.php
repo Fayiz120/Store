@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Check if the user is logged in and is an admin
+if (!(isset($_SESSION["is_admin"]) && $_SESSION["is_admin"] === true)) {
+    header("Location: index.php"); // Redirect to index.php for normal users
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
