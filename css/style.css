@@ -3,6 +3,7 @@ body{
     padding: 0;
     background-color: #E4E9FD;
     font-family: 'Montserrat', sans-serif;
+    min-width: 150vh;
 }
 .header{
     background-color: #A683E3 ;
